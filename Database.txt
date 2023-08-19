@@ -1,0 +1,18 @@
+
+1.create table userFA store related to FA
+create table userfa(name varchar(20),id varchar(40) PRIMARY KEY ,pass varchar(30));
+
+2.create userstudent table use for login of student
+create table userstudent(id varchar(30) PRIMARY KEY,pass varchar(30));
+
+3.create student_info it is used for student information.
+create table student_info(name varchar(30),mail varchar(50) PRIMARY KEY,reg varchar(20),sem varchar(10),course varchar(20),branch varchar(20),mob varchar(12),gender varchar(10),FOREIGN KEY(reg) REFERENCES userstudent(id));
+
+4.create table mailsend use store of temporary otp with email
+CREATE TABLE mailsend(mail varchar(30),otp varchar(5));
+
+5.create a table of mcacore store core paper of mca
+CREATE TABLE mcacore(s_code varchar(10) PRIMARY KEY,s_name varchar(50),s_credit int(10),s_slot varchar(2));
+
+6.create a table name mcasub store of Elective paper of MCA student
+CREATE TABLE mcasub(s_code varchar(10) PRIMARY KEY,s_name varchar(50),s_credit int(10),s_slot varchar(2));
